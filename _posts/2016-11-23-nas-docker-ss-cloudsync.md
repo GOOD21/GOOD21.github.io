@@ -48,13 +48,15 @@ connecting cfl.dropboxstatic.com:443
 connecting notify.dropboxapi.com:443
 ```
 
-这些请求跟没没走代理，改成`.dropbox*.com`之后就好使了。
+这些请求根本没走代理，改成`.dropbox*.com`之后就好使了。
 
 在github上有个**gfwlist2privoxy**的repo，可以把所有gfwlist转换成privoxy的actionfiles，这样就实现了PAC。（然而感觉在NAS上并没有什么卵用...）
 
 #### 按需同步
 
-在CloudSync的设置里可以调整**轮询期**，默认是10s，我是拿来做备份的，不需要实时性，所以改成了3600s。
+在CloudSync的设置里可以调整**轮询期**，默认是10s。
+
+我是拿来做备份的，不需要实时性，所以改成了3600s。
 
 ![2](/img/in-post/nas-docker-ss-cloudsync/2.png)
 
