@@ -26,6 +26,7 @@ Synolocy DSM里面的**Docker**简直屌爆了，有了它你能干的事情就�
 因为群晖NAS**只支持http代理**，所以必须要用**privoxy**。
 
 这是根据bluebu这哥们改写的，他写的是代理全部，所有的请求都走shadowsocks代理，但是其实我们只需要Dropbox和GoogleDrive走代理，所以在privoxy里配置改为如下：
+
 ```
 # forward-socks5  / 127.0.0.1:7070  .  # 打开就是代理全部请求
 forward          /    .
@@ -34,12 +35,14 @@ forward-socks5  .*google*.* 127.0.0.1:7070  . # 代理googledrive相关请求
 ```
 
 这里关于dropbox有个地方比较坑，几乎网上的文章写的配置都是这样的：
+
 ```
 forward-socks5 .dropbox.com 127.0.0.1:7070 .
 forward .dropbox.com:443 .
 ```
 
 这样的话，在CloudSync里`暂停同步`之后再`恢复同步`是好用的，但是后续的10s一次检查就一直显示`连接中`，根据抓包的请求发现：
+
 ```
 connecting cfl.dropboxstatic.com:443
 connecting notify.dropboxapi.com:443
