@@ -15,7 +15,14 @@ tags:
 
 直到周六放假，强迫症的我实在是忍不了了，仔细查了下，原来是 Chrome 在2016年10月份正式把WoSign 和 StartCom 的证书置为不信任状态，在Chrome 56 版本之后绑定WoSign 和 StartCom 证书的网站将无法打开。（详见：[Distrusting WoSign and StartCom Certificates](https://security.googleblog.com/2016/10/distrusting-wosign-and-startcom.html)）
 
-这就很尴尬了，我用的正好是StartCom的免费证书，而且刚升级的Chrome 56...所以开始了纠结的换证书之旅...
+值得一提的是有一份报告[WoSign and StartCom](https://docs.google.com/document/d/1C6BlmbeQfn4a9zydVi2UvjBGv6szuSB4sMYUcVrR8vQ/preview)，当中有一段如下：
+
+>In our policy newsgroup, WoSign proposed that an appropriate response to this list of issues (or the subset of them known at the time they made their proposal, which did not include any of the SHA-1 backdating information) would be to constrain them to issuing in the China market only in future. However, we don’t feel that Mozilla’s users in China have lower requirements for CA trustworthiness than Mozilla’s users elsewhere.
+
+
+我擦，这样真的好吗？就坑国人？...
+
+言归正传，我用的正好是StartCom的免费证书，而且刚升级的Chrome 56...这就TMD很尴尬了，所以开始了纠结的换证书之旅...
 
 首选的是`Let's Encrypt`，Synology里面有集成的工具，但是因为需要对外开80端口，所以基本上验证不通过。外加这个证书的有效期是3个月，虽然可以启个计划任务3个月更新一次，但是想想还是太恶心了，而且越来越不敢用免费的东西了...
 

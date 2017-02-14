@@ -49,7 +49,7 @@ Synology 在 DSM 里提供了花生壳的客户端，可以让花生壳的DDNS�
 
 毕竟家庭网络暴露在外面，心里多多少少还是不安的，所以上HTTPS吧。
 
-可以去Starssl 申请到**免费**的个人SSL，**3年一续**。
+可以去Startssl 申请到**免费**的个人SSL，**3年一续**。
 
 证书传到DSM之后，把默认的Synology.com删掉就行，开启**HSTS**，默认走https。
 
