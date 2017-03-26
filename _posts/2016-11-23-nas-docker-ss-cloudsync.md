@@ -17,9 +17,27 @@ Synology DSM自带的**Cloud Sync**支持同步各种网盘到指定的文件夹
 #### Docker
 Synolocy DSM里面的**Docker**简直屌爆了，有了它你能干的事情就多了。
 
+首先，你要有一个VPS，搭一个Shadowsocks的Server。推荐搬瓦工的，这里就不细说了。
+
 你可以在注册表里搜`shadowsocks-privoxy` 选择`gd41340811/shadowsocks-privoxy`。
 
 ![1](/img/in-post/nas-docker-ss-cloudsync/1.png)
+
+下载之后在映像里点击`启动`-->`高级设置`。
+
+在`端口设置`里，设置你的本地端口，默认是“自动”，你也可以指定固定的未被占用的端口。
+
+![3](/img/in-post/nas-docker-ss-cloudsync/3.png)
+
+在`环境`里，要加入你的Shadowsocks Server的`SERVER_ADDR`、`SERVER_PORT`、`PASSWORD`
+
+![4](/img/in-post/nas-docker-ss-cloudsync/4.png)
+
+设置完成之后，启动实例，在`控制面板`-->`网络`-->`代理服务器`-->`高级设置`，设置代理，其中http对应容器端口8118的本地端口，https对应容器端口7070的本地端口。
+
+![5](/img/in-post/nas-docker-ss-cloudsync/5.png)
+
+之后，你的NAS就可以科学上网了。
 
 #### privoxy
 
