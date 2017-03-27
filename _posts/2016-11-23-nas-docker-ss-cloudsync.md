@@ -25,6 +25,8 @@ Synolocy DSM里面的**Docker**简直屌爆了，有了它你能干的事情就�
 
 下载之后在映像里点击`启动`-->`高级设置`。
 
+![6](/img/in-post/nas-docker-ss-cloudsync/6.png)
+
 在`端口设置`里，设置你的本地端口，默认是“自动”，你也可以指定固定的未被占用的端口。
 
 ![3](/img/in-post/nas-docker-ss-cloudsync/3.png)
@@ -37,13 +39,19 @@ Synolocy DSM里面的**Docker**简直屌爆了，有了它你能干的事情就�
 
 ![5](/img/in-post/nas-docker-ss-cloudsync/5.png)
 
-之后，你的NAS就可以科学上网了。
+之后，你的NAS就可以**科学上网**了。
 
 #### privoxy
 
 因为群晖NAS**只支持http代理**，所以必须要用**privoxy**。
 
-这是根据bluebu这哥们改写的，他写的是代理全部，所有的请求都走shadowsocks代理，但是其实我们只需要Dropbox和GoogleDrive走代理，所以在privoxy里配置改为如下：
+`gd41340811/shadowsocks-privoxy`是根据bluebu这哥们改写的，他写的是代理全部，所有的请求都走shadowsocks代理，但是其实我们只需要Dropbox和GoogleDrive走代理。
+
+>github地址：[https://github.com/GOOD21/shadowsocks-privoxy](https://github.com/GOOD21/shadowsocks-privoxy)
+>dockerhub：[https://hub.docker.com/r/gd41340811/shadowsocks-privoxy/](https://hub.docker.com/r/gd41340811/shadowsocks-privoxy/)     
+>欢迎 fork star
+
+在privoxy里配置改为如下：
 
 ```
 # forward-socks5  / 127.0.0.1:7070  .  # 打开就是代理全部请求
