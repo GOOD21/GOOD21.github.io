@@ -15,7 +15,7 @@ weibo_username:     GOOOOOOOOOOOOOOOD21
 #zhihu_username:  
 github_username:    GOOD21
 twitter_username: 41340811
-facebook_username: GOOOOOOOOOOD21 
+# facebook_username: GOOOOOOOOOOD21 
 
 
 # Build settings
@@ -45,12 +45,12 @@ kramdown:
 
 
 # Disqus settings
-# disqus_username: GOOD21
+disqus_username: GOOD21
 
 # Duoshuo settings
-duoshuo_username: GOOD21
+# duoshuo_username: GOOD21
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 
