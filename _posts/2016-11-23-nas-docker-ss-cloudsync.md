@@ -35,7 +35,7 @@ Synolocy DSM里面的**Docker**简直屌爆了，有了它你能干的事情就�
 
 ![4](/img/in-post/nas-docker-ss-cloudsync/4.png)
 
-设置完成之后，启动实例，在`控制面板`-->`网络`-->`代理服务器`-->`高级设置`，设置代理，其中http对应容器端口8118的本地端口，https对应容器端口7070的本地端口。
+设置完成之后，启动实例，在`控制面板`-->`网络`-->`代理服务器`-->`高级设置`，设置代理，其中http和https都对应容器端口8118的本地端口32771。(注：7070就是全局的ss代理，8118是provixy的pac代理，如果想要区分http和https的请求，在这里改就可以了)
 
 ![5](/img/in-post/nas-docker-ss-cloudsync/5.png)
 
